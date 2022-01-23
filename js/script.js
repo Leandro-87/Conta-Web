@@ -1,7 +1,6 @@
 const url = window.location.href
 const urlSplit = url.split("/")[4].split(".")[0]
 
-
 const idBody = document.body
 idBody.classList.add(urlSplit)
 
