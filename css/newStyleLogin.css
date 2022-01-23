@@ -1,0 +1,40 @@
+*{transition: 400ms; transition-timing-function: ease-out;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {background-color: #f3f2fd;}
+.dv-button {
+    background-color: #f58534; border: 0; padding: 10px 15px; border-radius: 3px; font-weight: bold; font-family: 'Roboto', verdana, sans-serif !important; text-decoration: none; color:#FFF;
+    box-shadow: 0 0 5px 0px rgb(0 0 0 / 25%); cursor: pointer; font-size: 12pt; transition: 300ms;  animation-timing-function: ease-in;
+}
+.dv-button:hover {background-color: #e47628; box-shadow: 0 0 10px 1px rgb(0 0 0 / 6%); text-decoration: none; color: #FFF;}
+
+#page-login {height: 100vh; display: grid; justify-content: center; align-items: center; grid-template-columns: 470px 600px; grid-template-rows: 500px; grid-template-areas:'logo form-login'; align-content: center;}
+#page-login > .container {grid-area: logo; background-color: #faf8fd; width: 100%; height: 100%; align-content: center; justify-content: center; display: grid; border-radius: 20px 0 0 20px; box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);}
+#page-login form {grid-area: form-login; box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%); border-radius: 0 20px 20px 0; overflow: hidden;}
+#page-login form .container {width: auto; padding: 0; background-color: #FFF; font-family: 'Roboto', sans-serif;}
+#page-login form .container .jumbotron{margin: 0; height: 500px; display: flex; flex-direction: column; justify-content: space-evenly; background-color:transparent; padding: 100px 65px;}
+#page-login form .container .jumbotron h2 {text-transform: lowercase;}
+#page-login form .container .jumbotron p:nth-child(2) {display: none;}
+#page-login form .container .jumbotron label {font-weight: normal;}
+#page-login form .container .jumbotron .form-group {width: 100%;}
+#page-login form .container .jumbotron .form-group .form-control {background-color: #faf8fd;}
+#page-login #ctl00_ContentPlaceHolder1_btnComecar {background-color: #f58534; border: 0;} 
+#page-login #ctl00_ContentPlaceHolder1_btnComecar:hover {background-color: #e47628;}  
+#ctl00_ContentPlaceHolder1_lblErro_Login {color: #FFF !important; background: #bb2929; padding: 10px; display: block; border-radius: 4px; font-weight: bold;}
+
+@media (max-width:700px) {
+    /*#page-login {grid-template-columns: 100vw; grid-template-areas:'logo' 'form-login'; grid-template-rows: auto; }*/
+    #page-login {display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; justify-content: flex-start;}
+    #page-login > .container {border-radius: 0; padding: 2em 0; height: auto;}
+    #page-login form {border-radius: 0;}
+    #page-login form .container .jumbotron {justify-content: flex-start; padding: 2em 3em; align-items: stretch;}
+    #page-login form .container .jumbotron .form-group .form-control { height: 4em;}
+    #page-login #ctl00_ContentPlaceHolder1_btnComecar {height: 6rem !important; width: 100% !important;}
+    #page-login > .container img {height: 150px;}
+
+}
+
+@media (min-width:701px) and (max-width:1366px) {
+    #page-login {grid-template-columns: 350px 480px; grid-template-rows: 400px;}
+    #page-login form .container .jumbotron {height: 400px;}
+}
